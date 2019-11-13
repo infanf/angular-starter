@@ -1,9 +1,0 @@
-stages:
-  - test
-
-test angular-starter:
-  stage: test
-  image: elunic/node-angular-chrome:node12-angular8
-  script:
-    - "npm i --unsafe"
-    - "npm run test:ci"
