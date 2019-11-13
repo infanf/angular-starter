@@ -1,10 +1,6 @@
 stages:
   - test
 
-services:
-  - name: mysql:5.7
-    alias: db-testing
-
 test angular-starter:
   stage: test
   image: elunic/node-angular-chrome:node12-angular8

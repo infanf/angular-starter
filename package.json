@@ -7,8 +7,8 @@
     "start": "ng serve",
     "build:production": "ng build --prod --aot",
     "build:staging": "ng build -c staging typescript-starter",
-    "test": "ISTANBUL_ADD_REPORTERS=text-summary ng test typescript-starter",
-    "test:ci": "ISTANBUL_ADD_REPORTERS=text,json-summary KARMA_ADD_REPORTERS=junit ng test typescript-starter --watch=false --progress=false && npm run check",
+    "test": "ISTANBUL_ADD_REPORTERS=text-summary ng test --browsers=ChromeHeadless",
+    "test:ci": "ISTANBUL_ADD_REPORTERS=text,json-summary KARMA_ADD_REPORTERS=junit ng test --watch=false --browsers=ChromeHeadless --progress=false && npm run check",
     "check": "ng lint --type-check --tslint-config tslint.fix.json --format codeFrame && prettier --config .prettierrc --check 'src/**/*.{ts,js,html,css,scss,sass,less}'",
     "fix": "ng lint --type-check --fix --tslint-config tslint.fix.json --format codeFrame && prettier --config .prettierrc --write 'src/**/*.{ts,js,html,css,scss,sass,less}'",
     "e2e": "ng e2e"
